@@ -5,15 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="9.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Building Blocks\Core\Queridometro.Core\Queridometro.Core.csproj" />
+    <ProjectReference Include="..\..\..\Building Blocks\Services\Queridometro.WebAPI.Core\Queridometro.WebAPI.Core.csproj" />
   </ItemGroup>
 
 
