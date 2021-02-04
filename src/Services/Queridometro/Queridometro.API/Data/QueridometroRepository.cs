@@ -32,7 +32,6 @@ namespace Queridometro.API.Data
 
         public void AddVote(ObjectId Id, Emoji vote)
         {
-            //_queridometro.UpdateOne(x => x.Id.Equals(Id), );
             var participant = _queridometro.Find(x => x._id == Id).FirstOrDefault();
             participant.AddEmoji(vote);
             _queridometro.ReplaceOne(book => book._id == Id, participant);
@@ -43,9 +42,9 @@ namespace Queridometro.API.Data
             return await _queridometro.Find(x => x._id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Core.Entities.Queridometro>> GetAll()
+        public async Task<IList<Core.Entities.Queridometro>> GetAll()
         {
-            return await _queridometro.Find(x => x != null).ToListAsync();
+            return await _queridometro.Find(x => x._id != null).ToListAsync();
         }
 
         public void AddParticipant(string name)

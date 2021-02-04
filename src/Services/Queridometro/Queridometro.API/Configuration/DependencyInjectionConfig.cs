@@ -16,8 +16,8 @@ namespace Queridometro.API.Configuration
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddScoped<IMediatorHandler, MediatorHandler>();
-            services.AddScoped<IRequestHandler<RegisterVoteCommand, ValidationResult>, QueridometroCommandHandler>();
 
+            services.AddScoped<IRequestHandler<RegisterVoteCommand, ValidationResult>, QueridometroCommandHandler>();
             services.AddScoped<IRequestHandler<CreateParticipantCommand, ValidationResult>, ParticipantCommandHandler>();
 
             services.AddScoped<IQueridometroRepository, QueridometroRepository>();

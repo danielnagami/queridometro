@@ -18,13 +18,17 @@ namespace Queridometro.Core.Entities
 
         [BsonId]
         public ObjectId _id { get; set; }
+
         public string Nome { get; private set; }
+
         public string Photo { get; private set; }
+
         [BsonElement]
 
         private List<Emoji> _emojis;
         
         public IReadOnlyCollection<Emoji> Emojis => _emojis?.AsReadOnly();
+
 
         public void AddEmoji(Emoji emoji)
         {
