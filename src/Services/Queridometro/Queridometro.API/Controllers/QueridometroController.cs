@@ -2,6 +2,7 @@
 using Queridometro.API.Application.Commands;
 using Queridometro.Core.MediatorHandler;
 using Queridometro.WebAPI.Core;
+using Queridometro.WebAPI.Core.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;

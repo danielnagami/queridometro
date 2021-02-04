@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Queridometro.WebAPI.Core
+namespace Queridometro.WebAPI.Core.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller
