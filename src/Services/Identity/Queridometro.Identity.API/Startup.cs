@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Queridometro.Identity.API.Configuration;
+using Queridometro.WebAPI.Core.Identity;
 
 namespace Queridometro.Identity.API
 {
@@ -49,7 +50,7 @@ namespace Queridometro.Identity.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthConfiguration();
 
             app.UseEndpoints(endpoints =>
             {

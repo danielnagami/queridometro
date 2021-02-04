@@ -119,7 +119,7 @@ namespace Queridometro.Identity.API.Controllers
 
             var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
             {
-                Issuer = _appSettings.Origin,
+                Issuer = _appSettings.Issuer,
                 Audience = _appSettings.ValidAt,
                 Subject = identityClaims,
                 Expires = DateTime.UtcNow.AddHours(_appSettings.ExpirationHours),

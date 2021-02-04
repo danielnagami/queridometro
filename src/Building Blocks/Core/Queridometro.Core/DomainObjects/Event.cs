@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Queridometro.Core.Messages;
 using System;
 
 namespace Queridometro.Core.DomainObjects

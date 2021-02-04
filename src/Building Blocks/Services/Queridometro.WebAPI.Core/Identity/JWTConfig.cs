@@ -1,5 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using Queridometro.WebAPI.Core.Models;
 using System.Text;
 
 namespace Queridometro.WebAPI.Core.Identity
@@ -28,8 +32,8 @@ namespace Queridometro.WebAPI.Core.Identity
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = true,
                     ValidateAudience = true,
-                    ValidAudience = appSettings.ValidoEm,
-                    ValidIssuer = appSettings.Emissor
+                    ValidAudience = appSettings.ValidAt,
+                    ValidIssuer = appSettings.Issuer
                 };
             });
         }
