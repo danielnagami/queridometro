@@ -2,15 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>f2e43e35-2b54-41de-a11b-9db573bbea74</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="9.5.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Building Blocks\Core\Queridometro.Core\Queridometro.Core.csproj" />
     <ProjectReference Include="..\..\..\Building Blocks\Services\Queridometro.WebAPI.Core\Queridometro.WebAPI.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Events\" />
   </ItemGroup>
 
 

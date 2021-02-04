@@ -1,4 +1,7 @@
-﻿using Queridometro.Core.DomainObjects;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using Queridometro.Core.DomainObjects;
+using System;
 using System.Collections.Generic;
 
 namespace Queridometro.Core.Entities
@@ -13,10 +16,14 @@ namespace Queridometro.Core.Entities
 
         protected Queridometro() { }
 
+        [BsonId]
+        public ObjectId _id { get; set; }
         public string Nome { get; private set; }
         public string Photo { get; private set; }
+        [BsonElement]
 
         private List<Emoji> _emojis;
+        
         public IReadOnlyCollection<Emoji> Emojis => _emojis?.AsReadOnly();
 
         public void AddEmoji(Emoji emoji)

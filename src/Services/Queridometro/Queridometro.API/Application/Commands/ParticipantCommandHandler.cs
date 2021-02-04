@@ -2,24 +2,22 @@
 using MediatR;
 using Queridometro.API.Data;
 using Queridometro.Core.Messages;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Queridometro.API.Application.Commands
 {
-    public class QueridometroCommandHandler : CommandHandler, IRequestHandler<RegisterVoteCommand, ValidationResult>
+    public class ParticipantCommandHandler : CommandHandler, IRequestHandler<CreateParticipantCommand, ValidationResult>
     {
         private readonly IQueridometroRepository _queridometroRepository;
 
-        public QueridometroCommandHandler(IQueridometroRepository queridometroRepository)
+        public ParticipantCommandHandler(IQueridometroRepository queridometroRepository)
         {
             _queridometroRepository = queridometroRepository;
         }
-
-        public Task<ValidationResult> Handle(RegisterVoteCommand request, CancellationToken cancellationToken)
+        public Task<ValidationResult> Handle(CreateParticipantCommand request, CancellationToken cancellationToken)
         {
-            _queridometroRepository.AddVote(request.ParticipantId, request.Vote);
+            _queridometroRepository.AddParticipant(request.Nome);
 
             return PersistData(_queridometroRepository.UnitOfWork);
         }

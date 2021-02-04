@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 
 namespace Queridometro.Core.DomainObjects
 {
     public abstract class Entity
     {
+        [BsonIgnore]
         public Guid Id { get; set; }
     
         protected Entity()

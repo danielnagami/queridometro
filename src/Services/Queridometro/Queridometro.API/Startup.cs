@@ -1,15 +1,12 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Queridometro.API.Configuration;
+using Queridometro.API.Models;
+using Queridometro.WebAPI.Core.Identity;
 
 namespace Queridometro.API
 {
@@ -35,11 +32,35 @@ namespace Queridometro.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var mongoSettingsSection = Configuration.GetSection("MongoSettings");
+            services.Configure<MongoSettings>(mongoSettingsSection);
+
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Total",
+                    builder =>
+                    builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    );
+            });
+
+            services.AddJWTConfiguration(Configuration);
+
+            services.AddSwaggerConfiguration();
+
+            services.AddMediatR(typeof(Startup));
+
+            services.RegisterServices();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwaggerConfiguration();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -49,7 +70,9 @@ namespace Queridometro.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthConfiguration();
+
+            app.UseCors("Total");
 
             app.UseEndpoints(endpoints =>
             {
