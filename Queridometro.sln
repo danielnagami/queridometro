@@ -19,13 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{425ADB96-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{804A2A26-A1F8-4F08-BD2F-111F41D856C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.API", "src\Services\Queridometro\Queridometro.API\Queridometro.API.csproj", "{397AAAE4-70A9-4BCE-AF09-CD44BA02C5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queridometro.API", "src\Services\Queridometro\Queridometro.API\Queridometro.API.csproj", "{397AAAE4-70A9-4BCE-AF09-CD44BA02C5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.Identity.API", "src\Services\Identity\Queridometro.Identity.API\Queridometro.Identity.API.csproj", "{973BB49A-B36C-4722-86FF-00FBC307D5C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queridometro.Identity.API", "src\Services\Identity\Queridometro.Identity.API\Queridometro.Identity.API.csproj", "{973BB49A-B36C-4722-86FF-00FBC307D5C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.WebApp", "src\Web\Queridometro.WebApp\Queridometro.WebApp.csproj", "{C5C557F0-A369-4443-B826-F8713065D481}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.Core", "src\Building Blocks\Core\Queridometro.Core\Queridometro.Core.csproj", "{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queridometro.Core", "src\Building Blocks\Core\Queridometro.Core\Queridometro.Core.csproj", "{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC62A646-B903-4062-91B8-82F13638468F}"
 	ProjectSection(SolutionItems) = preProject
@@ -34,9 +32,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{78466F81-F6CC-4D11-B81B-6107F821D313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.Tests", "src\Tests\Queridometro.Tests\Queridometro.Tests.csproj", "{6607A244-889D-4C90-BA4D-3EF02D9C73B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queridometro.Tests", "src\Tests\Queridometro.Tests\Queridometro.Tests.csproj", "{6607A244-889D-4C90-BA4D-3EF02D9C73B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.WebAPI.Core", "src\Building Blocks\Services\Queridometro.WebAPI.Core\Queridometro.WebAPI.Core.csproj", "{276873BB-2BAB-4977-8D2F-4029C1B229E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queridometro.WebAPI.Core", "src\Building Blocks\Services\Queridometro.WebAPI.Core\Queridometro.WebAPI.Core.csproj", "{276873BB-2BAB-4977-8D2F-4029C1B229E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{110611A3-55B3-484F-8F80-54FE016FE5D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queridometro.WebApp.MVC", "src\Web\MVC\Queridometro.WebApp.MVC\Queridometro.WebApp.MVC.csproj", "{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,10 +54,6 @@ Global
 		{973BB49A-B36C-4722-86FF-00FBC307D5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973BB49A-B36C-4722-86FF-00FBC307D5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{973BB49A-B36C-4722-86FF-00FBC307D5C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5C557F0-A369-4443-B826-F8713065D481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5C557F0-A369-4443-B826-F8713065D481}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5C557F0-A369-4443-B826-F8713065D481}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5C557F0-A369-4443-B826-F8713065D481}.Release|Any CPU.Build.0 = Release|Any CPU
 		{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,6 +66,10 @@ Global
 		{276873BB-2BAB-4977-8D2F-4029C1B229E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{276873BB-2BAB-4977-8D2F-4029C1B229E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{276873BB-2BAB-4977-8D2F-4029C1B229E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,11 +84,12 @@ Global
 		{804A2A26-A1F8-4F08-BD2F-111F41D856C6} = {F069D749-75C7-4843-9D06-71F72C3BC9CF}
 		{397AAAE4-70A9-4BCE-AF09-CD44BA02C5FD} = {CE5A3F17-9AC8-4F05-B528-0CE21CAD24DE}
 		{973BB49A-B36C-4722-86FF-00FBC307D5C8} = {D3CF05EB-63B9-44E8-B937-B8666FB599A9}
-		{C5C557F0-A369-4443-B826-F8713065D481} = {347AC6C8-F8F5-4D29-BA82-AE20A99529DA}
 		{940E52E5-36B2-43EC-A65D-00DAA6C3BDA6} = {425ADB96-AF00-4730-99AE-497832213DB1}
 		{78466F81-F6CC-4D11-B81B-6107F821D313} = {4185AF23-9B1C-4AB3-B67B-A256A693E921}
 		{6607A244-889D-4C90-BA4D-3EF02D9C73B8} = {78466F81-F6CC-4D11-B81B-6107F821D313}
 		{276873BB-2BAB-4977-8D2F-4029C1B229E5} = {804A2A26-A1F8-4F08-BD2F-111F41D856C6}
+		{110611A3-55B3-484F-8F80-54FE016FE5D2} = {347AC6C8-F8F5-4D29-BA82-AE20A99529DA}
+		{C3025B3E-B077-42CE-9BCC-2C3ADCAA3442} = {110611A3-55B3-484F-8F80-54FE016FE5D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0A1AE81-C026-408F-8C7A-BDC2A94C0D3B}

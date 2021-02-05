@@ -7,6 +7,7 @@ using Queridometro.API.Data;
 using Queridometro.API.Models;
 using Queridometro.Core.MediatorHandler;
 using Queridometro.WebAPI.Core.Controllers;
+using System;
 using System.Threading.Tasks;
 
 namespace Queridometro.API.Controllers
@@ -35,7 +36,7 @@ namespace Queridometro.API.Controllers
         [HttpGet("get-participant")]
         public async Task<IActionResult> GetParticipant(string id)
         {
-            return CustomResponse(_queridometroRepository.Get(ObjectId.Parse(id)).Result);
+            return CustomResponse(_queridometroRepository.Get(id).Result);
         }
 
         [HttpGet("get-participants")]

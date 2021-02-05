@@ -32,12 +32,12 @@ namespace Queridometro.API.Data
 
         public void AddVote(ObjectId Id, Emoji vote)
         {
-            var participant = _queridometro.Find(x => x._id == Id).FirstOrDefault();
+            var participant = _queridometro.Find(x => x._id == Id.ToString()).FirstOrDefault();
             participant.AddEmoji(vote);
-            _queridometro.ReplaceOne(book => book._id == Id, participant);
+            _queridometro.ReplaceOne(book => book._id == Id.ToString(), participant);
         }
 
-        public async Task<Core.Entities.Queridometro> Get(ObjectId id)
+        public async Task<Core.Entities.Queridometro> Get(string id)
         {
             return await _queridometro.Find(x => x._id == id).FirstOrDefaultAsync();
         }

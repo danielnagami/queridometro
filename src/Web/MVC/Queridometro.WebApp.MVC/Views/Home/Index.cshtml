@@ -1,0 +1,41 @@
+﻿@using Queridometro.WebApp.MVC
+@model IList<Queridometro.WebApp.MVC.Models.ParticipantViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    foreach (var participant in Model.OrderBy(p => p.nome))
+    {
+        <a href="/Participant?id=@participant._id"> @participant.nome </a>
+        if (participant.emojis != null)
+        {
+            foreach (var emoji in participant.emojis)
+            {
+                switch (emoji)
+                {
+                    case Queridometro.Core.Entities.Emoji.Amo:
+                        <span>❤</span>
+                        break;
+                    case Queridometro.Core.Entities.Emoji.Odeio:
+                        <span>💣</span>
+                        break;
+                    case Queridometro.Core.Entities.Emoji.Deboche:
+                        <span>🍌</span>
+                        break;
+                    case Queridometro.Core.Entities.Emoji.TantoFaz:
+                        <span>🌱</span>
+                        break;
+                    case Queridometro.Core.Entities.Emoji.Nojo:
+                        <span>🤮</span>
+                        break;
+                    case Queridometro.Core.Entities.Emoji.Falsiane:
+                        <span>🐍</span>
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        <br />
+    }
+}

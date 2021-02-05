@@ -1,0 +1,22 @@
+﻿@using Queridometro.WebApp.MVC
+@model Queridometro.WebApp.MVC.Models.ParticipantViewModel
+@{
+    ViewData["Title"] = "Participante";
+}
+<h1>@Model.nome</h1>
+<form method="post" action="/Vote">
+    <input type="id" name="id" value="@Model._id" hidden>
+    <input type="radio" name="emoji" value="0" class="emoji-vote">
+    <label class="emoji-vote">❤</label>
+    <input type="radio" name="emoji" value="1" class="emoji-vote">
+    <label class="emoji-vote">💣</label>
+    <input type="radio" name="emoji" value="2" class="emoji-vote">
+    <label class="emoji-vote">🍌</label>
+    <input type="radio" name="emoji" value="3" class="emoji-vote">
+    <label class="emoji-vote">🌱</label>
+    <input type="radio" name="emoji" value="4" class="emoji-vote">
+    <label class="emoji-vote">🤮</label>
+    <input type="radio" name="emoji" value="5" class="emoji-vote">
+    <label class="emoji-vote">🐍</label>
+    <input type="submit">
+</form>

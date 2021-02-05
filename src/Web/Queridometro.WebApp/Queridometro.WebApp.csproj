@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Building Blocks\Services\Queridometro.WebAPI.Core\Queridometro.WebAPI.Core.csproj" />
+  </ItemGroup>
+
 </Project>

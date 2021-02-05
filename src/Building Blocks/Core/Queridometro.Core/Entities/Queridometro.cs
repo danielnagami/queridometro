@@ -17,7 +17,8 @@ namespace Queridometro.Core.Entities
         protected Queridometro() { }
 
         [BsonId]
-        public ObjectId _id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; set; }
 
         public string Nome { get; private set; }
 

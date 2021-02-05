@@ -48,6 +48,8 @@ namespace Queridometro.API
                     );
             });
 
+            //services.AddJsonOptions(opt => { opt.SerializerSettings.Converters.Add(new ObjectIdConverter()); });
+
             services.AddJWTConfiguration(Configuration);
 
             services.AddSwaggerConfiguration();
