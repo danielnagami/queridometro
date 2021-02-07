@@ -4,12 +4,15 @@ namespace Queridometro.Core.Entities
 {
     public enum Emoji
     {
-        Amo,
-        Odeio,
-        Deboche,
-        [Display(Name = "Tanto Faz")]
-        TantoFaz,
+        Cobra,
         Nojo,
-        Falsiane
+        Feliz,
+        Triste,
+        Bomba,
+        Coração,
+        [Display(Name = "Coração Quebrado")]
+        CoraçãoQuebrado,
+        Banana,
+        Planta
     }
 }
