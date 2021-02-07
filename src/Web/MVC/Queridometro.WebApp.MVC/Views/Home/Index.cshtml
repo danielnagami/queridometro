@@ -3,48 +3,52 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@{
-    foreach (var participant in Model.OrderBy(p => p.nome))
-    {
-        <a href="/Participant?id=@participant._id"> @participant.nome </a>
-        if (participant.emojis != null)
+<div class="flex-container" id="bbb-box">
+    @{
+        foreach (var participant in Model.OrderBy(p => p.nome))
         {
-            foreach (var emoji in participant.emojis)
-            {
-                switch (emoji)
+            <div class="single-card">
+                <a href="/Participant?id=@participant._id"> @participant.nome </a>
+                @if (participant.emojis != null)
                 {
-                    case Queridometro.Core.Entities.Emoji.Cobra:
-                        <span>🐍</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Nojo:
-                        <span>🤮</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Feliz:
-                        <span>🙂</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Triste:
-                        <span>🙁</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Bomba:
-                        <span>💣</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Coração:
-                        <span>❤</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.CoraçãoQuebrado:
-                        <span>💔</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Banana:
-                        <span>🍌</span>
-                        break;
-                    case Queridometro.Core.Entities.Emoji.Planta:
-                        <span>🌱</span>
-                        break;
-                    default:
-                        break;
+                    foreach (var emoji in participant.emojis)
+                    {
+                        switch (emoji)
+                        {
+                            case Queridometro.Core.Entities.Emoji.Cobra:
+                                <span>🐍</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Nojo:
+                                <span>🤮</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Feliz:
+                                <span>🙂</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Triste:
+                                <span>🙁</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Bomba:
+                                <span>💣</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Coração:
+                                <span>❤</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.CoraçãoQuebrado:
+                                <span>💔</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Banana:
+                                <span>🍌</span>
+                                break;
+                            case Queridometro.Core.Entities.Emoji.Planta:
+                                <span>🌱</span>
+                                break;
+                            default:
+                                break;
+                        }
+                    }
                 }
-            }
+                <br />
+            </div>
         }
-        <br />
     }
-}
+</div>

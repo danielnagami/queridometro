@@ -3,20 +3,28 @@
 @{
     ViewData["Title"] = "Participante";
 }
-<h1>@Model.nome</h1>
+<h1 style="color: white;">@Model.nome</h1>
 <form method="post" action="/Vote">
     <input type="id" name="id" value="@Model._id" hidden>
-    <input type="radio" name="emoji" value="0" class="emoji-vote">
-    <label class="emoji-vote">❤</label>
-    <input type="radio" name="emoji" value="1" class="emoji-vote">
-    <label class="emoji-vote">💣</label>
-    <input type="radio" name="emoji" value="2" class="emoji-vote">
-    <label class="emoji-vote">🍌</label>
-    <input type="radio" name="emoji" value="3" class="emoji-vote">
-    <label class="emoji-vote">🌱</label>
-    <input type="radio" name="emoji" value="4" class="emoji-vote">
-    <label class="emoji-vote">🤮</label>
-    <input type="radio" name="emoji" value="5" class="emoji-vote">
-    <label class="emoji-vote">🐍</label>
+    <div class="emojis">
+        <input type="radio" name="emoji" value="0" class="emoji-vote">
+        <label class="emoji-vote">🐍</label>
+        <input type="radio" name="emoji" value="1" class="emoji-vote">
+        <label class="emoji-vote">🤮</label>
+        <input type="radio" name="emoji" value="2" class="emoji-vote">
+        <label class="emoji-vote">🙂</label>
+        <input type="radio" name="emoji" value="3" class="emoji-vote">
+        <label class="emoji-vote">🙁</label>
+        <input type="radio" name="emoji" value="4" class="emoji-vote">
+        <label class="emoji-vote">💣</label>
+        <input type="radio" name="emoji" value="5" class="emoji-vote">
+        <label class="emoji-vote">❤</label>
+        <input type="radio" name="emoji" value="6" class="emoji-vote">
+        <label class="emoji-vote">💔</label>
+        <input type="radio" name="emoji" value="7" class="emoji-vote">
+        <label class="emoji-vote">🍌</label>
+        <input type="radio" name="emoji" value="8" class="emoji-vote">
+        <label class="emoji-vote">🌱</label>
+    </div>
     <input type="submit">
 </form>
