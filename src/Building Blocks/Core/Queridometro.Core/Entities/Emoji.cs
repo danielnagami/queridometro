@@ -13,6 +13,10 @@ namespace Queridometro.Core.Entities
         [Display(Name = "Coração Quebrado")]
         CoraçãoQuebrado,
         Banana,
-        Planta
+        Planta,
+        Mala,
+        Flecha,
+        [Display(Name = "Nariz de Pinóquio")]
+        NarizDePinoquio
     }
 }
